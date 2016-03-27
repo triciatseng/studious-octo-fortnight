@@ -9,8 +9,20 @@ namespace app.Services {
       return this.WishResource.query();
     }
 
+    public getOne(id:any){
+      return this.WishResource.get({id:id});
+    }
+
     public create(item:app.i.IWish){
       return this.WishResource.save(item).$promise;
+    }
+
+    public update(item:app.i.IWish){
+      return this.WishResource.save(item).$promise;
+    }
+
+    public remove(id:any){
+      return this.WishResource.delete({id:id}).$promise;
     }
 
     constructor(private $resource: ng.resource.IResourceService){
