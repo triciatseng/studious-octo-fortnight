@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <title>+wish list+</title>
+  <meta charset="utf-8">
+  <base href="/" />
+  <link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/site.css"/>
+</head>
+
+<body>
+  <div class="well">
+    <button type="button" class="btn btn-primary" ui-sref="Home"><span class="glyphicon glyphicon-home" aria-hidden="true"> h o m e</span></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="btn btn-danger" ui-sref="Add"><span class= "glyphicon glyphicon-heart-empty" aria-hidden="true"> a d d</span></button>
+  </div>
+
+  <ui-view></ui-view>
+
+  <script src="/scripts/angular/angular.min.js"></script>
+  <script src="/scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/scripts/angular-resource/angular-resource.min.js"></script>
+  <script src="/scripts/angular-animate/angular-animate.min.js"></script>
+  <script src="/scripts/angular-touch/angular-touch.min.js"></script>
+  <script src="/scripts/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/services/services.js"></script>
+  <script src="/js/controllers/HomeController.js"></script>
+  <script src="/js/controllers/AddController.js"></script>
+</body>
+
+</html>
