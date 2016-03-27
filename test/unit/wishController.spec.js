@@ -27,27 +27,27 @@ describe('wishController',() => {
       };
       controller(item).getAll(req, res, next);
     });
-    // it('Should call next() with the error as a param on error',(done) => {
-    //   let item = {
-    //     find: function() {
-    //       return {
-    //         exec: function(cb) {
-    //           cb('Error!')
-    //         }
-    //       }
-    //     }
-    //   };
-    //   let req = {};
-    //   let res = {
-    //     json: function() {
-    //       throw new Error('Called res.json when it should not have done so.');
-    //     }
-    //   };
-    //   let next = function(err) {
-    //     err.should.equal('Error!');
-    //     done();
-    //   };
-    //   controller(item).getAll(req,res,next);
-    // });
+    it('Should call next() with the error as a param on error',(done) => {
+      let item = {
+        find: function() {
+          return {
+            exec: function(cb) {
+              cb('Error!')
+            }
+          }
+        }
+      };
+      let req = {};
+      let res = {
+        json: function() {
+          throw new Error('Called res.json when it should not have done so.');
+        }
+      };
+      let next = function(err) {
+        err.should.equal('Error!');
+        done();
+      };
+      controller(item).getAll(req,res,next);
+    });
   });
 });
