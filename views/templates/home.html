@@ -1,4 +1,4 @@
-<div ng-init="sort='itemPrice'">
+<div ng-init="sort='dateAdd'">
 
 <div class="row">
   <div class="col-md-1"></div>
@@ -9,8 +9,12 @@
       </center>
     </div>
     <div class="container well">
+      <div style="text-align: right">
+        <button type="button" class="btn btn-info" ng-show="sort === 'dateAdd'" ng-click="sort='-dateAdd'"><span class="glyphicon glyphicon-chevron-up"></span><span class="space"></span>sort date</button>
+        <button type="button" class="btn btn-info" ng-show="sort === '-dateAdd'" ng-click="sort='dateAdd'"><span class="glyphicon glyphicon-chevron-down"></span><span class="space"></span>sort date</button>
+      </div>
       <center>
-      <div ng-repeat="c in vm.wishlist">
+      <div ng-repeat="c in vm.wishlist | orderBy: sort">
       <span class="space"></span>
       <div class="box">
         <div style="font-size: large">
@@ -20,8 +24,6 @@
         <img ng-src={{c.itemImg}} style="width: 20%;max-height: 100%;" />
         <br />
         <div style="text-align: right; font-family: sans-serif, FontAwesome">
-          <!-- <strong>&#xf155;: <em>{{c.itemPrice | number:2}}</em></strong>
-          <br /> -->
           <span class="space"></span>
           <strong>&#xf271;: <em>{{c.dateAdd | date:'shortDate'}}</em></strong>
 
