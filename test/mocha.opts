@@ -1,5 +1,4 @@
 --recursive
 --ui bdd
 -R spec
---timeout 90
 --require should

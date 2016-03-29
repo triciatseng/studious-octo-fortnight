@@ -1,0 +1,45 @@
+.space {
+  width:15px;
+  height:auto;
+  display:inline-block;
+}
+
+.space1{
+  width:55px;
+  height:auto;
+  display:inline-block;
+}
+
+.space10{
+  width:255px;
+  height:auto;
+  display:inline-block;
+}
+
+.box{
+  width: 500px;
+  padding: 10px;
+  border: 5px solid rgb(79, 80, 80);
+  margin: 0;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}

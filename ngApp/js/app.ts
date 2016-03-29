@@ -16,6 +16,11 @@ namespace app {
       templateUrl: '/templates/add.html',
       controller: 'AddController',
       controllerAs: 'vm'
+    }).state('Details',{
+      url:'/details/:id',
+      templateUrl: '/templates/details.html',
+      controller: 'DetailsController',
+      controllerAs: 'vm'
     });
 
     $urlRouterProvider.otherwise('/');

@@ -1,7 +1,6 @@
 import * as express from 'express';
 import {IWishModel} from '../models/Wish';
 import * as mongoose from 'mongoose';
-import {Wish} from '../models/Wish';
 
 export function controller(Wish: mongoose.Model<IWishModel>) {
   return {
@@ -11,7 +10,6 @@ export function controller(Wish: mongoose.Model<IWishModel>) {
     update: update,
     remove: remove
   }
-}
 
 function getAll(req:express.Request, res:express.Response, next:Function) {
   Wish.find({})
@@ -50,4 +48,6 @@ function remove(req: express.Request, res: express.Response, next: Function) {
     if (err) return next (err);
     res.json ({message: 'This item has been removed from your wishlist.'});
   });
+}
+
 }

@@ -1,1 +1,31 @@
-<h1>Add</h1>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="container">
+      <center>
+        <h2><span class="glyphicon glyphicon-heart"></span><span class="space"></span>Add an Item</h2>
+      </center>
+    </div>
+    <div class="container well">
+      <form class="form-inline" ng-submit="vm.create()">
+        <span class="space10"></span>
+        <input type="text" ng-model="vm.item.itemName" class="form-control" placeholder="&#xf06b;  item name" style="font-family: sans-serif, FontAwesome" />
+        <span class="space1"></span>
+        <input type="url" ng-model="vm.item.itemURL" class="form-control" placeholder="&#xf270;  url" style="font-family: sans-serif, FontAwesome" />
+        <br /><br />
+        <span class="space10"></span>
+        <input type="text" ng-model="vm.item.itemDesc" class="form-control" placeholder="why you &#xf004; it" style="font-family: sans-serif, FontAwesome" />
+        <span class="space1"></span>
+        <input type="url" ng-model="vm.item.itemImg" class="form-control" placeholder="&#xf083;  url" style="font-family: sans-serif, FontAwesome" />
+        <br /><br />
+        <span class="space10"></span>
+        <input type="number" step="any" min="0" ng-model="vm.item.itemPrice" class="form-control" placeholder="&#xf155;  msrp" style="font-family: sans-serif, FontAwesome" />
+        <span class="space1"></span>
+        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span><span class="space"></span>add</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-1"><span class="space1"></span></div>
+
+
+</div>

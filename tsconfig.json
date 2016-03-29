@@ -28,9 +28,15 @@
   "compileOnSave": true,
   "buildOnSave": false,
   "files": [
+    "api/wishController.ts",
+    "interfaces/IWish.ts",
+    "models/Wish.ts",
     "ngApp/js/app.ts",
-    "ngApp/js/controllers.ts",
-    "ngApp/js/services.ts",
+    "ngApp/js/controllers/AddController.ts",
+    "ngApp/js/controllers/HomeController.ts",
+    "ngApp/js/services/services.ts",
+    "routes/viewRoutes.ts",
+    "routes/wishRoutes.ts",
     "server.ts",
     "typings/browser.d.ts",
     "typings/browser/ambient/angular-resource/index.d.ts",
@@ -48,7 +54,9 @@
     "typings/browser/ambient/morgan/index.d.ts",
     "typings/browser/ambient/node/index.d.ts",
     "typings/browser/ambient/serve-favicon/index.d.ts",
-    "typings/browser/ambient/serve-static/index.d.ts"
+    "typings/browser/ambient/serve-static/index.d.ts",
+    "typings/browser/ambient/should/index.d.ts",
+    "typings/browser/ambient/supertest/index.d.ts"
   ],
   "atom": {
     "rewriteTsconfig": false

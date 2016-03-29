@@ -6,16 +6,19 @@
   <meta charset="utf-8">
   <base href="/" />
   <link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="//bootswatch.com/paper/bootstrap.min.css" /> -->
   <link rel="stylesheet" href="/css/site.css"/>
 </head>
 
 <body>
-  <div class="well">
-    <button type="button" class="btn btn-primary" ui-sref="Home"><span class="glyphicon glyphicon-home" aria-hidden="true"> h o m e</span></button>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-danger" ui-sref="Add"><span class= "glyphicon glyphicon-heart-empty" aria-hidden="true"> a d d</span></button>
+  <div class="col-md-12">
+  <div class="well well-lg">
+    <button type="button" class="btn btn-primary" ui-sref="Home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><span class="space"></span>h o m e</button>
+    <span class="space"></span>
+    <button type="button" class="btn btn-danger" ui-sref="Add"><span class= "glyphicon glyphicon-heart-empty" aria-hidden="true"></span><span class="space"></span>a d d</button>
   </div>
-
+</div>
   <ui-view></ui-view>
 
   <script src="/scripts/angular/angular.min.js"></script>
@@ -29,6 +32,7 @@
   <script src="/js/services/services.js"></script>
   <script src="/js/controllers/HomeController.js"></script>
   <script src="/js/controllers/AddController.js"></script>
+
 </body>
 
 </html>

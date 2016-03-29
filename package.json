@@ -13,22 +13,29 @@
     "dotenv": "^2.0.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "mocha": "^2.4.5",
     "mongoose": "^4.4.10",
     "morgan": "^1.7.0",
     "node": "0.0.0",
     "serve-favicon": "^2.3.0",
-    "should": "^8.3.0",
-    "supertest": "^1.2.0"
+    "superagent": "^1.8.3"
   },
   "devDependencies": {
     "mocha": "^2.4.5",
     "should": "^8.3.0",
+    "superagent": "^1.8.3",
     "supertest": "^1.2.0"
   },
   "main": "server.js",
   "directories": {
     "test": "test"
   },
-  "author": ""
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triciatseng/studious-octo-fortnight.git"
+  },
+  "bugs": {
+    "url": "https://github.com/triciatseng/studious-octo-fortnight/issues"
+  },
+  "homepage": "https://github.com/triciatseng/studious-octo-fortnight#readme"
 }

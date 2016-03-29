@@ -1,5 +1,4 @@
 'use strict';
-let should = require('should');
 let controller = require('../../api/wishController').controller;
 
 describe('wishController',() => {
