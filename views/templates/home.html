@@ -1,3 +1,5 @@
+<div ng-init="sort='itemPrice'">
+
 <div class="row">
   <div class="col-md-1"></div>
   <div class="col-md-10">
@@ -17,9 +19,12 @@
         <br />
         <img ng-src={{c.itemImg}} style="width: 20%;max-height: 100%;" />
         <br />
-        <div style="text-align: right;">
-          <strong><em>$ {{c.itemPrice | number:2}}</em></strong>
+        <div style="text-align: right; font-family: sans-serif, FontAwesome">
+          <!-- <strong>&#xf155;: <em>{{c.itemPrice | number:2}}</em></strong>
+          <br /> -->
           <span class="space"></span>
+          <strong>&#xf271;: <em>{{c.dateAdd | date:'shortDate'}}</em></strong>
+
         </div>
         <br />
         <button class="btn btn-info" ui-sref="Details({id:c._id})"><span class="glyphicon glyphicon-barcode"></span><span class="space"></span>Details</button>
@@ -31,4 +36,6 @@
     </div>
   </div>
   <div class="col-md-1"></div>
+</div>
+
 </div>
