@@ -7,5 +7,6 @@ namespace app.i{
       itemURL: string;
       itemImg: string;
       dateAdd: number;
+      itemASIN: string;
   }
 }

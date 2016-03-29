@@ -10,8 +10,26 @@
   display:inline-block;
 }
 
+.space3{
+  width:163px;
+  height:auto;
+  display:inline-block;
+}
+
+.space5{
+  width:180px;
+  height:auto;
+  display:inline-block;
+}
+
 .space10{
   width:255px;
+  height:auto;
+  display:inline-block;
+}
+
+.space100{
+  width:555px;
   height:auto;
   display:inline-block;
 }

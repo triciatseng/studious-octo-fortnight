@@ -18,7 +18,7 @@ namespace app.Services {
     }
 
     public update(item:app.i.IWish){
-      return this.WishResource.save(item).$promise;
+      return this.WishResource.update({ id: item._id }, { itemName: item.itemName, itemPrice: item.itemPrice, itemDesc: item.itemDesc, itemURL: item.itemURL, itemImg: item.itemImg }).$promise;
     }
 
     public remove(id:any){
@@ -26,7 +26,9 @@ namespace app.Services {
     }
 
     constructor(private $resource: ng.resource.IResourceService){
-      this.WishResource = <IWishClass>$resource('/api/v1/wishlist/:id');
+      this.WishResource = <IWishClass>$resource('/api/v1/wishlist/:id', null, {
+        'update': {method: 'PUT'}
+      });
     }
   }
   angular.module('app').service('WishService', WishService);

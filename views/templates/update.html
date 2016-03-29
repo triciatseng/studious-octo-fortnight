@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="container">
+      <center>
+        <h2><span class="glyphicon glyphicon-heart"></span><span class="space"></span>Update an Item</h2>
+      </center>
+    </div>
+    <div class="container well">
+      <form class="form-inline" ng-submit="vm.update()">
+        <span class="space5"></span>
+        <label>Item Name</label>
+        <input type="text" ng-model="vm.item.itemName" class="form-control" placeholder="&#xf06b;  item name" style="font-family: sans-serif, FontAwesome" />
+        <span class="space1"></span>
+        <label style="font-family: sans-serif, FontAwesome">&#xf270; URL</label>
+        <input type="url" ng-model="vm.item.itemURL" class="form-control" placeholder="&#xf270;  url" style="font-family: sans-serif, FontAwesome" />
+        <br /><br />
+        <span class="space3"></span>
+        <label style="font-family: sans-serif, FontAwesome">Why you &#xf004; it</label>
+        <input type="text" ng-model="vm.item.itemDesc" class="form-control" placeholder="why you &#xf004; it" style="font-family: sans-serif, FontAwesome" />
+        <span class="space1"></span>
+        <label style="font-family: sans-serif, FontAwesome">&#xf083;  URL</label>
+        <input type="url" ng-model="vm.item.itemImg" class="form-control" placeholder="&#xf083;  url" style="font-family: sans-serif, FontAwesome" />
+        <a ng-href="https://www.google.com/search?tbm=isch&q={{vm.item.itemName}}" target="_blank"><button class="btn btn-success" style="font-family: sans-serif, FontAwesome">search on &#xf1a0;</button></a>
+        <br /><br />
+        <span class="space3"></span>
+        <label>Current Price</label>
+        <input type="number" step="any" min="0" ng-model="vm.item.itemPrice" class="form-control" placeholder="&#xf155;  current price" style="font-family: sans-serif, FontAwesome" />
+        <span class="space1"></span>
+        <label style="font-family: sans-serif, FontAwesome">&#xf270; ASIN/ISBN-10</label>
+        <br />
+        <span class="space10"></span>
+        <span class="space10"></span>
+        <span class="space"></span>
+        <input type="text" step="any" min="0" ng-model="vm.item.itemASIN" class="form-control" placeholder="&#xf270; ASIN/ISBN-10" style="font-family: sans-serif, FontAwesome" />
+        <a ng-href="{{vm.item.itemURL}}" target="_blank"><button class="btn btn-success" style="font-family: sans-serif, FontAwesome">search on &#xf270;</button></a>
+        <br /><br />
+        <span class="space10"></span>
+        <span class="space1"></span>
+        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span><span class="space"></span>update</button>
+        <button class="btn btn-warning" ui-sref="Details({id:vm.item._id})"><span class="glyphicon glyphicon-remove"></span><span class="space"></span>cancel</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-1"><span class="space1"></span></div>
+
+
+</div>

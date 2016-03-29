@@ -19,7 +19,9 @@
         <input type="url" ng-model="vm.item.itemImg" class="form-control" placeholder="&#xf083;  url" style="font-family: sans-serif, FontAwesome" />
         <br /><br />
         <span class="space10"></span>
-        <input type="number" step="any" min="0" ng-model="vm.item.itemPrice" class="form-control" placeholder="&#xf155;  msrp" style="font-family: sans-serif, FontAwesome" />
+        <input type="number" step="any" min="0" ng-model="vm.item.itemPrice" class="form-control" placeholder="&#xf155;  current price" style="font-family: sans-serif, FontAwesome" />
+        <span class="space1"></span>
+        <input type="text" step="any" min="0" ng-model="vm.item.itemASIN" class="form-control" placeholder="&#xf270;  ASIN/ISBN-10" style="font-family: sans-serif, FontAwesome" />
         <span class="space1"></span>
         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span><span class="space"></span>add</button>
       </form>

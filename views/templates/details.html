@@ -32,7 +32,9 @@
         <strong>&#xf270;  URL: </strong><a style="color: rgb(109, 147, 222);" ng-href="{{vm.item.itemURL}}" target="_blank">{{vm.item.itemURL}}</a>
       </div>
       <br />
-      <button class="btn btn-warning" ui-sref="Update({id: vm.image._id})"><span class="glyphicon glyphicon-pencil"></span></button>
+      <a ng-href="http://camelcamelcamel.com/search?sq={{vm.item.itemASIN}}" target="_blank"><button class="btn btn-success"><span class="glyphicon glyphicon-piggy-bank"></span><span class="space"></span>CamelCamelCamel</button></a>
+      <span class="space"></span>
+      <button class="btn btn-warning" ui-sref="Update({id: vm.item._id})"><span class="glyphicon glyphicon-pencil"></span></button>
       <span class="space"></span>
       <button class="btn btn-danger" ng-click="vm.remove()"><span class="glyphicon glyphicon-remove"></span></button>
     </div>
