@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="container">
+      <center>
+        <h1><span class="glyphicon glyphicon-star"></span><span class="space"></span>Details</h1>
+      </center>
+    </div>
+    <div class="container well">
+      <div class="col-md-5">
+        <center>
+        <div class="widebox">
+          <img ng-src={{vm.item.itemImg}} style="width: 75%;max-height: 100%;" />
+      </div>
+      <br />
+      <p style="font-size: large">
+        <strong>$ {{vm.item.itemPrice | number:2}}</strong>
+      </p>
+      </center>
+    </div>
+    <div class="col-md-6">
+      <br />
+      <h3>{{vm.item.itemName}}</h3>
+      <br />
+      <span class="glyphicon glyphicon-heart"></span><span class="space"></span>{{vm.item.itemDesc}}
+      <br />
+      <br />
+      <strong>Date Added: </strong>{{vm.item.dateAdd | date:'longDate'}}
+      <br />
+      <br />
+      <div style="font-family: sans-serif, FontAwesome">
+        <strong>&#xf270;  URL: </strong><a style="color: rgb(109, 147, 222);" ng-href="{{vm.item.itemURL}}" target="_blank">{{vm.item.itemURL}}</a>
+      </div>
+      <br />
+      <button class="btn btn-warning" ui-sref="Update({id: vm.image._id})"><span class="glyphicon glyphicon-pencil"></span></button>
+      <span class="space"></span>
+      <button class="btn btn-danger" ng-click="vm.remove()"><span class="glyphicon glyphicon-remove"></span></button>
+    </div>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>

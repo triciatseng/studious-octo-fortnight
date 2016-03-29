@@ -9,8 +9,8 @@ namespace app.Services {
       return this.WishResource.query();
     }
 
-    public getOne(id:any){
-      return this.WishResource.get({id:id});
+    public getOne(id:string){
+      return this.WishResource.get({ id: id });
     }
 
     public create(item:app.i.IWish){
@@ -26,7 +26,7 @@ namespace app.Services {
     }
 
     constructor(private $resource: ng.resource.IResourceService){
-      this.WishResource = <IWishClass>$resource('api/v1/wishlist/:id');
+      this.WishResource = <IWishClass>$resource('/api/v1/wishlist/:id');
     }
   }
   angular.module('app').service('WishService', WishService);

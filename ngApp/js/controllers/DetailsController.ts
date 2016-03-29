@@ -1,7 +1,22 @@
-namespace app,.Controllers{
-  export class DetailsController{
+namespace app.Controllers {
+  export class DetailsController {
+    public item: app.i.IWish;
 
-    constructor(private WishService: app.Services.WishService, private $state: ng.ui.IStateService){}
+    public remove() {
+      this.WishService.remove(this.item._id).then(() => {
+        this.$state.go('Home');
+      });
+    }
+
+
+    constructor(
+      private $stateParams: ng.ui.IStateParamsService,
+      private $state: ng.ui.IStateService,
+      private WishService: app.Services.WishService
+    ) {
+      this.item = WishService.getOne($stateParams['id']);
+    }
   }
-  angular.module('app').controller('DetailsController',DetailsController);
+
+  angular.module('app').controller('DetailsController', DetailsController);
 }
