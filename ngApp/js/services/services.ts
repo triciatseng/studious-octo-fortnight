@@ -18,7 +18,7 @@ namespace app.Services {
     }
 
     public update(item:app.i.IWish){
-      return this.WishResource.update({ id: item._id }, { itemName: item.itemName, itemPrice: item.itemPrice, itemDesc: item.itemDesc, itemURL: item.itemURL, itemImg: item.itemImg }).$promise;
+      return this.WishResource.update({ id: item._id }, { itemName: item.itemName, itemPrice: item.itemPrice, itemDesc: item.itemDesc, itemURL: item.itemURL, itemImg: item.itemImg, itemASIN: item.itemASIN }).$promise;
     }
 
     public remove(id:any){

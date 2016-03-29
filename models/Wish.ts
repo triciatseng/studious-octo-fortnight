@@ -4,7 +4,7 @@ export interface IWishModel extends app.i.IWish, mongoose.Document {}
 
 let wishSchema = new mongoose.Schema({
   itemName: { type: String, require: true },
-  itemPrice: { type: Number, require: true },
+  itemPrice: { type: Number, default: -1 },
   itemDesc: { type: String, require: true },
   dateAdd: { type: Number },
   itemASIN: { type: String },
