@@ -8,6 +8,7 @@ import mongoose = require('mongoose');
 const app = express();
 
 require('./models/Wish');
+require('./models/User');
 mongoose.connect('mongodb://localhost/wishlist', (err) => {
   if (err) console.error(err);
   else console.log('Connected to mongodb://localhost/wishlist');
@@ -31,6 +32,7 @@ app.use(express.static('./ngApp'));
 app.use('/scripts', express.static('bower_components'));
 
 app.use('/api/v1/wishlist', require ('./routes/wishRoutes'));
+app.use('/api/v1/users', require ('./routes/userRoutes'));
 
 app.get('/*', function(req, res, next) {
   if (/.js|.html|.css|templates|js|scripts/.test(req.path) || req.xhr) {
